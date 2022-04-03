@@ -10,6 +10,10 @@ jobs:
         run: |
           pwd
           ls
+          echo $GITHUB_SHA # Commit id of workflow
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
       - name: Checkout
         uses: actions/checkout@v2.4.0
       - name: List Files After Checkout
